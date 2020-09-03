@@ -1,0 +1,165 @@
+/* Setting the box-sizing property  and setting the min width to display the size
+of the mobile divice such as an Iphone or other related device at the same screen size */
+* {
+    box-sizing: border-box;+
+    min-width: 375px;
+}
+
+/* The websites form elements styling */
+/* Below in the body element styling that is being done, is that we are setting the background 
+    color and setting the background imaged on top of that and making sure it does not repeat and 
+    does fit inside the container assigned to */
+body {
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+/* Here in the footer all that is being done is that we are setting the min width to align with the 
+    rest of the formatting. Also we are just formatting the font color and setting the font style as 
+    well as the font weight and size. */
+footer {
+    min-width: 375px;
+    color: white;
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Poppins' sans-serif;  /* Designating the font style and the font weight */
+    font-weight: 700;
+}
+
+/* For the button contol, all we are wanting to do is to round off the conrners of the button and 
+    set the background color and size of the button */
+button {
+    border-radius: 25px;
+    background-color: hsl(248, 11%, 86%);
+    width: 230px;
+    height: 35px;
+}
+
+/* The defined Pseudo-classes */
+/* Below all that is being done is that we are just defining the anchor links that are visited that we 
+    keep the font color black and removing the underline that is there by default. Also for the visited 
+    class we are just changing that font color to white to show that the link has been used. */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+/* Below here is all the difined and formatting for the classes that are being used. */
+/* For the main part all that is getting done is that we are just defining the font family,
+    setting the min width as well as other styling == all should be pretty self explanatory. */
+.main-container {
+    font-family: 'Open Sans' sans-serif;
+    min-width: 375px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 3em;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 1em 0 2em;
+}
+
+.site_logo img{
+    width: 11.5rem;
+    margin-bottom: 6rem;
+    position: relative;
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+.illustration-background img {
+    width: 75%;
+    padding-bottom: 7em;
+    
+}
+
+/* For below this is where all the social media formatting is happening. Most should be pretty simple to 
+    understand, the most important part is that the links are being displayed ina flex style to keep it 
+    all in a vertical line instead of block level elements. */
+.social-media-links {
+    display: flex;
+    margin-top: 3.5em;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.social-media-links a {
+    font-weight: bolder;
+    color: black;
+}
+
+.sm_facebook img {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.sm_twitter img {
+    width: 30px;
+    margin-left: 1em;
+    
+}
+
+.sm_insta img{
+    width: 30px;
+    margin-left: 1em;
+}
+
+/* Below here is the media querie/queries that are going to be used for the screen sizes that are going to be 
+larger then mobile phone screen sizes. Here we are defining the screen sizes that of a desktop computer
+
+Media Queries */
+/* Here in the body portion of the media querie the importatnt part is that we need to change the width of the 
+    screen to 1440px and we also have to change the background image URL path to the desktop version. */
+@media only screen and (min-width: 600px) {
+ body {
+     background-image: url(../images/bg-desktop.svg);
+     max-width: 1440px;
+ }   
+
+ /* In the main contaier part we have to set the flex style and set it to row so all things are being displayed in
+    a row setting instead of the previous column setting. */
+ .main-container {
+     display: flex;
+     flex-direction: row;
+ }
+/* In the social media links section all we had to do was to push the media links to the right side end of the page. */
+ .social-media-links {
+     justify-content: flex-end;
+ }
+/* for the illustration image just had to adjust the size of the illustration. */
+ .illustration-background img {
+     width: 57.5rem;
+ }
+
+ .site_logo img {
+     width: 20rem;
+     padding-bottom: 4rem;
+ }
+
+ .desktop_format {
+     margin-top: 13rem;
+ }
+
+ .main-text-content {
+     padding-left: 5rem;
+     text-align: left;
+ }
+
+ h1 {
+     text-align: left;
+     padding-left: 5rem;
+ }
+}
